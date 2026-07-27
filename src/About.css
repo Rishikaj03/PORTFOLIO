@@ -1,0 +1,44 @@
+.about{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.section-title{
+    font-size:2.5rem;
+    margin-bottom:50px;
+}
+
+.about-container{
+    display:grid;
+    grid-template-columns:1.5fr 1fr;
+    gap:60px;
+    align-items:start;
+}
+
+.about-text p{
+    line-height:1.9;
+    font-size:1.05rem;
+}
+
+.about-info{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.info-card{
+    display:flex;
+    gap:20px;
+    padding:20px;
+    border:1px solid #ddd;
+    border-radius:12px;
+}
+
+.info-card span{
+    font-size:1.6rem;
+}
+
+.info-card h4{
+    margin-bottom:6px;
+}

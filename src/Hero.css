@@ -1,0 +1,78 @@
+.hero{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:80px;
+}
+
+.hero-content{
+
+    flex:1;
+}
+
+.hero-image{
+
+    flex:1;
+
+    display:flex;
+    justify-content:center;
+}
+
+.image-box{
+
+    width:350px;
+    height:420px;
+
+    border:2px dashed #999;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:20px;
+}
+
+.greeting{
+
+    font-size:1.2rem;
+    margin-bottom:10px;
+}
+
+.hero h1{
+
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+.hero h2{
+
+    font-size:2rem;
+    line-height:1.4;
+    margin-bottom:25px;
+}
+
+.description{
+
+    max-width:550px;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+
+    display:flex;
+    gap:20px;
+}
+
+.hero-buttons button{
+
+    padding:14px 28px;
+
+    border:1px solid #222;
+
+    border-radius:10px;
+
+    font-size:1rem;
+}

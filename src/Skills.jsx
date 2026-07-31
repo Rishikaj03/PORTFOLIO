@@ -1,88 +1,127 @@
 import "./Skills.css";
 
+import {
+  FaCode,
+  FaRobot,
+  FaChartLine,
+  FaGlobe,
+  FaTools,
+} from "react-icons/fa";
+
 function Skills() {
 
   const skills = [
+
     {
       title: "Programming",
-      items: ["Python", "C++", "Java", "SQL"]
+      icon: <FaCode />,
+      items: ["Python", "C++", "Java", "SQL"],
     },
+
     {
       title: "AI & Machine Learning",
+      icon: <FaRobot />,
       items: [
         "Machine Learning",
         "Deep Learning",
-        "NLP",
-        "Computer Vision"
-      ]
+        "Natural Language Processing",
+        "Computer Vision",
+      ],
     },
+
     {
       title: "Data Science",
+      icon: <FaChartLine />,
       items: [
         "Pandas",
         "NumPy",
         "Power BI",
-        "Data Visualization"
-      ]
+        "Data Visualization",
+      ],
     },
+
     {
       title: "Web Development",
+      icon: <FaGlobe />,
       items: [
         "HTML",
         "CSS",
         "JavaScript",
         "React",
-        "Django"
-      ]
+        "Django",
+      ],
     },
+
     {
       title: "Tools",
+      icon: <FaTools />,
       items: [
         "GitHub",
         "VS Code",
         "Streamlit",
-        "Google Cloud"
-      ]
-    }
+        "Google Cloud",
+      ],
+    },
+
   ];
 
-
   return (
+
     <section className="skills" id="skills">
 
-      <h2>My Skills</h2>
+      {/* Heading */}
+
+      <div className="skills-heading">
+
+        <span className="skills-tag">
+          TECHNOLOGIES & TOOLSI WORK WITH
+        </span>
+
+        <h2>Skills & Technologies</h2>
+
+      </div>
 
       <p className="skill-subtitle">
-        Technologies and tools I work with
+        A collection of programming languages, frameworks, tools, and technologies
+        I use to build intelligent and impactful applications.
       </p>
 
+      {/* Cards */}
 
       <div className="skill-container">
 
-        {
-          skills.map((skill, index) => (
-            <div className="skill-card" key={index}>
+        {skills.map((skill, index) => (
 
-              <h3>{skill.title}</h3>
+          <div className="skill-card" key={index}>
 
-              <div className="skill-tags">
-                {
-                  skill.items.map((item, i)=>(
-                    <span key={i}>
-                      {item}
-                    </span>
-                  ))
-                }
-              </div>
+            <div className="skill-icon">
+              {skill.icon}
+            </div>
+
+            <h3>{skill.title}</h3>
+
+            <div className="skill-tags">
+
+              {skill.items.map((item, i) => (
+
+                <span key={i}>
+                  {item}
+                </span>
+
+              ))}
 
             </div>
-          ))
-        }
+
+          </div>
+
+        ))}
 
       </div>
 
     </section>
+
   );
+
 }
 
 export default Skills;

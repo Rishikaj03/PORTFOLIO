@@ -17,7 +17,7 @@ function About() {
 
         <h2>About Me</h2>
         <span className="about-tag">
-          BUILDING INTELLIGENT SOLUTIONS THROUGH TECHNOLOGY
+        Designing, Developing, and Continuously Learning  
         </span>
 
       </div>

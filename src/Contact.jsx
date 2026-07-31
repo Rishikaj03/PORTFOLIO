@@ -110,7 +110,7 @@ function Contact() {
             <span>LeetCode</span>
           </a>
 
-          <a href="#" className="coding-card">
+          <a href="https://www.hackerrank.com/profile/rishika1387" className="coding-card">
             <SiHackerrank />
             <span>HackerRank</span>
           </a>

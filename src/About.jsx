@@ -12,8 +12,13 @@ function About() {
     <section className="about" id="about">
 
       <div className="about-heading">
-        <span className="about-tag">ABOUT ME</span>
-        <h2>Passionate About Building Intelligent Solutions</h2>
+
+        <span className="about-tag">
+          Designing, Developing, and Continuously Learning
+        </span>
+
+        <h2>About Me</h2>
+
       </div>
 
       <p className="about-text">
@@ -27,18 +32,15 @@ function About() {
       <div className="about-grid">
 
         <div className="about-card">
-
           <h3>
             <FaBullseye className="about-icon" />
             Focus
           </h3>
 
           <p>Aspiring Data Science Professional</p>
-
         </div>
 
         <div className="about-card">
-
           <h3>
             <FaBrain className="about-icon" />
             Interests
@@ -48,11 +50,9 @@ function About() {
           <p>Machine Learning</p>
           <p>Data Science</p>
           <p>Web Development</p>
-
         </div>
 
         <div className="about-card">
-
           <h3>
             <FaSeedling className="about-icon" />
             Currently Exploring
@@ -61,18 +61,15 @@ function About() {
           <p>Generative AI</p>
           <p>Computer Vision</p>
           <p>React</p>
-
         </div>
 
         <div className="about-card">
-
           <h3>
             <FaLocationDot className="about-icon" />
             Location
           </h3>
 
           <p>Nagpur, India</p>
-
         </div>
 
       </div>

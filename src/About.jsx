@@ -3,7 +3,7 @@ import "./About.css";
 import {
   FaBullseye,
   FaBrain,
-  FaSeedling,
+  FaLaptopCode,
   FaLocationDot,
 } from "react-icons/fa6";
 
@@ -11,15 +11,19 @@ function About() {
   return (
     <section className="about" id="about">
 
+      {/* Heading */}
+
       <div className="about-heading">
 
         <span className="about-tag">
-          Designing, Developing, and Continuously Learning
+          BUILDING INTELLIGENT SOLUTIONS THROUGH TECHNOLOGY
         </span>
 
         <h2>About Me</h2>
 
       </div>
+
+      {/* Description */}
 
       <p className="about-text">
         I enjoy learning new technologies and building practical solutions that
@@ -29,47 +33,81 @@ function About() {
         improving through hands-on projects.
       </p>
 
+      {/* Cards */}
+
       <div className="about-grid">
 
         <div className="about-card">
-          <h3>
-            <FaBullseye className="about-icon" />
-            Focus
-          </h3>
 
-          <p>Aspiring Data Science Professional</p>
+          <div className="icon-box">
+            <FaBullseye />
+          </div>
+
+          <h3>Focus</h3>
+
+          <p>
+            Aspiring Data Science Professional
+          </p>
+
         </div>
 
-        <div className="about-card">
-          <h3>
-            <FaBrain className="about-icon" />
-            Interests
-          </h3>
 
-          <p>Artificial Intelligence</p>
-          <p>Machine Learning</p>
-          <p>Data Science</p>
-          <p>Web Development</p>
+        <div className="about-card">
+
+          <div className="icon-box">
+            <FaBrain />
+          </div>
+
+          <h3>Interests</h3>
+
+          <ul>
+
+            <li>Artificial Intelligence</li>
+
+            <li>Machine Learning</li>
+
+            <li>Data Science</li>
+
+            <li>Web Development</li>
+
+          </ul>
+
         </div>
 
-        <div className="about-card">
-          <h3>
-            <FaSeedling className="about-icon" />
-            Currently Exploring
-          </h3>
 
-          <p>Generative AI</p>
-          <p>Computer Vision</p>
-          <p>React</p>
+        <div className="about-card">
+
+          <div className="icon-box">
+            <FaLaptopCode />
+          </div>
+
+          <h3>Currently Exploring</h3>
+
+          <ul>
+
+            <li>Generative AI</li>
+
+            <li>Computer Vision</li>
+
+            <li>React</li>
+
+          </ul>
+
         </div>
 
-        <div className="about-card">
-          <h3>
-            <FaLocationDot className="about-icon" />
-            Location
-          </h3>
 
-          <p>Nagpur, India</p>
+        <div className="about-card">
+
+          <div className="icon-box">
+            <FaLocationDot />
+          </div>
+
+          <h3>Location</h3>
+
+          <p>
+            Nagpur, India
+          </p>
+
         </div>
 
       </div>

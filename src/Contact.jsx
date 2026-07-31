@@ -105,7 +105,7 @@ function Contact() {
 
         <div className="coding-container">
 
-          <a href="#" className="coding-card">
+          <a href="https://leetcode.com/u/rishika1387/" className="coding-card" target="_blank" rel="noreferrer">
             <SiLeetcode />
             <span>LeetCode</span>
           </a>

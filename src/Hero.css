@@ -1,78 +1,199 @@
-.hero{
+.hero {
+    min-height: 100vh;
 
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    gap:80px;
+    gap: 80px;
+
+    padding-top: 80px;
 }
 
-.hero-content{
+/* Left Side */
 
-    flex:1;
+.hero-content {
+    flex: 1;
 }
 
-.hero-image{
+.greeting {
+    display: inline-block;
 
-    flex:1;
+    background: var(--section);
 
-    display:flex;
-    justify-content:center;
+    color: var(--primary);
+
+    padding: 10px 20px;
+
+    border-radius: 30px;
+
+    font-size: 0.95rem;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
 }
 
-.image-box{
+.hero h1 {
+    font-size: 4.5rem;
 
-    width:350px;
-    height:420px;
+    line-height: 1.1;
 
-    border:2px dashed #999;
+    color: var(--text);
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    border-radius:20px;
+    margin-bottom: 20px;
 }
 
-.greeting{
+.hero h2 {
+    font-size: 2rem;
 
-    font-size:1.2rem;
-    margin-bottom:10px;
+    color: var(--primary);
+
+    font-weight: 600;
+
+    margin-bottom: 25px;
 }
 
-.hero h1{
+.description {
+    max-width: 580px;
 
-    font-size:4rem;
-    margin-bottom:15px;
+    color: var(--text-light);
+
+    line-height: 1.9;
+
+    font-size: 1.05rem;
+
+    margin-bottom: 40px;
 }
 
-.hero h2{
+/* Buttons */
 
-    font-size:2rem;
-    line-height:1.4;
-    margin-bottom:25px;
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.description{
+.hero-buttons button {
+    padding: 15px 32px;
 
-    max-width:550px;
-    line-height:1.8;
-    margin-bottom:35px;
+    border-radius: 50px;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    transition: all .35s ease;
+
+    cursor: pointer;
 }
 
-.hero-buttons{
+/* Primary Button */
 
-    display:flex;
-    gap:20px;
+.hero-buttons button:first-child {
+    background: var(--primary);
+
+    color: white;
+
+    border: none;
 }
 
-.hero-buttons button{
+.hero-buttons button:first-child:hover {
+    transform: translateY(-4px);
 
-    padding:14px 28px;
+    box-shadow: var(--shadow-hover);
+}
 
-    border:1px solid #222;
+/* Secondary Button */
 
-    border-radius:10px;
+.hero-buttons button:last-child {
+    background: transparent;
 
-    font-size:1rem;
+    color: var(--primary);
+
+    border: 2px solid var(--primary);
+}
+
+.hero-buttons button:last-child:hover {
+    background: var(--primary);
+
+    color: white;
+
+    transform: translateY(-4px);
+}
+
+/* Right Side */
+
+.hero-image {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* Image Card */
+
+.image-box {
+    width: 360px;
+    height: 460px;
+
+    background: var(--section);
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    transition: .35s ease;
+}
+
+.image-box:hover {
+    transform: translateY(-10px);
+
+    box-shadow: var(--shadow-hover);
+}
+
+/* Profile Image */
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+
+    .hero {
+        flex-direction: column-reverse;
+
+        text-align: center;
+
+        gap: 50px;
+    }
+
+    .description {
+        margin: 0 auto 40px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 3.2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .image-box {
+        width: 300px;
+        height: 380px;
+    }
+
 }

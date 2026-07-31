@@ -15,11 +15,10 @@ function About() {
 
       <div className="about-heading">
 
+        <h2>About Me</h2>
         <span className="about-tag">
           BUILDING INTELLIGENT SOLUTIONS THROUGH TECHNOLOGY
         </span>
-
-        <h2>About Me</h2>
 
       </div>
 

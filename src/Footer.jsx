@@ -42,19 +42,6 @@ function Footer() {
         </div>
 
 
-        <div className="social-links">
-
-          <a href="#">
-            GitHub
-          </a>
-
-          <a href="#">
-            LinkedIn
-          </a>
-
-        </div>
-
-
         <p className="copyright">
 
           © 2026 Rishika. All Rights Reserved.

@@ -15,7 +15,7 @@ function Skills() {
     {
       title: "Programming",
       icon: <FaCode />,
-      items: ["Python", "C++", "Java", "SQL"],
+      items: ["Python", "Java", "SQL"],
     },
 
     {
@@ -25,7 +25,6 @@ function Skills() {
         "Machine Learning",
         "Deep Learning",
         "Natural Language Processing",
-        "Computer Vision",
       ],
     },
 
@@ -73,12 +72,10 @@ function Skills() {
 
       <div className="skills-heading">
 
-        <span className="skills-tag">
-          TECHNOLOGIES & TOOLSI WORK WITH
-        </span>
-
         <h2>Skills & Technologies</h2>
-
+        <span className="skills-tag">
+          TECHNOLOGIES & TOOLS I WORK WITH
+        </span>
       </div>
 
       <p className="skill-subtitle">

@@ -1,3 +1,5 @@
+import { Routes, Route } from "react-router-dom";
+
 import Navbar from "./Navbar";
 import Hero from "./Hero";
 import About from "./About";
@@ -7,6 +9,8 @@ import Education from "./Education";
 import Certifications from "./Certifications";
 import Contact from "./Contact";
 import Footer from "./Footer";
+
+import CertificatesPage from "./pages/CertificatesPage";
 
 function App() {
   return (
@@ -21,6 +25,21 @@ function App() {
       <Contact />
       <Footer />
     </>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+
+      <Route path="/" element={<Home />} />
+
+      <Route
+        path="/certifications"
+        element={<CertificatesPage />}
+      />
+
+    </Routes>
   );
 }
 

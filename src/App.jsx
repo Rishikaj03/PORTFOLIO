@@ -11,8 +11,9 @@ import Contact from "./Contact";
 import Footer from "./Footer";
 
 import CertificatesPage from "./pages/CertificatesPage";
+import ProjectsPage from "./pages/ProjectsPage";
 
-function App() {
+function Home() {
   return (
     <>
       <Navbar />
@@ -31,7 +32,6 @@ function App() {
 function App() {
   return (
     <Routes>
-
       <Route path="/" element={<Home />} />
 
       <Route
@@ -39,6 +39,10 @@ function App() {
         element={<CertificatesPage />}
       />
 
+      <Route
+        path="/projects"
+        element={<ProjectsPage />}
+      />
     </Routes>
   );
 }

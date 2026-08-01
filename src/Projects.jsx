@@ -1,93 +1,86 @@
 import "./Projects.css";
+import { Link } from "react-router-dom";
+import { projects } from "./data/projects";
 
 function Projects() {
-
-  const projects = [
-    {
-      title: "NLP Toolkit",
-      description:
-        "A Natural Language Processing toolkit that performs text preprocessing, tokenization, stemming, lemmatization, POS tagging, NER and dependency parsing.",
-      tech:
-        ["Python", "NLTK", "spaCy", "Streamlit"],
-      github:
-        "https://github.com/Rishikaj03/NLP-Toolkit"
-    },
-
-    {
-      title: "Crop Recommendation System",
-      description:
-        "Machine learning based system that recommends suitable crops using soil and environmental parameters.",
-      tech:
-        ["Python", "Machine Learning", "Random Forest"],
-      github: "#"
-    },
-
-    {
-      title: "Student Study Planner",
-      description:
-        "A productivity application to manage study schedules, tasks and academic planning.",
-      tech:
-        ["Python", "Excel", "Data Management"],
-      github: "#"
-    },
-
-    {
-      title: "DBSCAN Clustering Analysis",
-      description:
-        "An unsupervised learning project implementing density-based clustering techniques.",
-      tech:
-        ["Python", "ML", "Data Visualization"],
-      github: "#"
-    }
-  ];
-
-
   return (
     <section className="projects" id="projects">
 
-      <h2>My Projects</h2>
+      <div className="project-heading">
+
+        <h2>Projects</h2>
+
+        <span className="project-tag">
+          FEATURED WORK
+        </span>
+
+      </div>
 
       <p className="project-subtitle">
-        Some projects I have built and explored
+        A selection of projects that showcase my skills in Artificial Intelligence,
+        Machine Learning, Data Science, NLP, and Web Development.
       </p>
-
 
       <div className="project-container">
 
-        {
-          projects.map((project,index)=>(
-            
-            <div className="project-card" key={index}>
+        {projects
+          .filter((project) => project.featured)
+          .map((project) => (
 
-              <h3>{project.title}</h3>
+            <div className="project-card" key={project.id}>
 
-              <p>
-                {project.description}
-              </p>
+              <div className="project-content">
 
+                <h3>{project.title}</h3>
 
-              <div className="tech-stack">
-                {
-                  project.tech.map((item,i)=>(
-                    <span key={i}>
-                      {item}
-                    </span>
-                  ))
-                }
+                <p>{project.description}</p>
+
+                <div className="tech-stack">
+
+                  {project.tech.map((item, i) => (
+                    <span key={i}>{item}</span>
+                  ))}
+
+                </div>
+
+                <div className="project-buttons">
+
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub ↗
+                  </a>
+
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Live Demo ↗
+                    </a>
+                  )}
+
+                </div>
+
               </div>
-
-
-              <a 
-                href={project.github}
-                target="_blank"
-              >
-                View Code →
-              </a>
 
             </div>
 
-          ))
-        }
+          ))}
+
+      </div>
+
+      <div className="view-more">
+
+        <Link
+          to="/projects"
+          className="explore-btn"
+        >
+          Explore All Projects →
+        </Link>
 
       </div>
 

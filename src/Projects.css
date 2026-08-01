@@ -1,112 +1,250 @@
-.projects {
+/* ===========================
+        PROJECTS SECTION
+=========================== */
 
-  padding:90px 8%;
-  background:#fff8f3;
-  text-align:center;
+.projects{
+    background:#fff;
+}
+
+/* ---------- Heading ---------- */
+
+.project-heading{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.project-heading h2{
+    font-size:3.2rem;
+    color:var(--text);
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.project-heading h2::after{
+    content:"";
+    display:block;
+    width:80px;
+    height:4px;
+    margin:18px auto 0;
+    background:var(--primary);
+    border-radius:50px;
+}
+
+.project-tag{
+    display:inline-block;
+    color:var(--primary);
+    font-size:.9rem;
+    font-weight:700;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+/* ---------- Subtitle ---------- */
+
+.project-subtitle{
+    max-width:850px;
+    margin:0 auto 70px;
+    text-align:center;
+    color:var(--text-light);
+    line-height:2;
+    font-size:1.05rem;
+}
+
+/* ---------- Grid ---------- */
+
+.project-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:28px;
+}
+
+/* ---------- Card ---------- */
+
+.project-card{
+
+    background:white;
+
+    border:1px solid #efefef;
+
+    border-radius:24px;
+
+    padding:30px;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.05);
+
+    transition:.35s ease;
 
 }
 
+.project-card:hover{
 
-.projects h2 {
+    transform:translateY(-10px);
 
-  font-size:2.8rem;
-  color:#2b2b2b;
+    border-color:rgba(183,110,121,.25);
 
-}
-
-
-.project-subtitle {
-
-  margin-top:10px;
-  color:#777;
+    box-shadow:0 18px 35px rgba(183,110,121,.15);
 
 }
 
+/* ---------- Content ---------- */
 
-.project-container {
+.project-content h3{
 
-  margin-top:50px;
+    font-size:1.35rem;
 
-  display:grid;
+    color:var(--text);
 
-  grid-template-columns:
-  repeat(auto-fit,minmax(280px,1fr));
+    margin-bottom:16px;
 
-  gap:30px;
-
-}
-
-
-.project-card {
-
-  background:white;
-
-  padding:30px;
-
-  border-radius:20px;
-
-  text-align:left;
-
-  box-shadow:
-  0 10px 30px rgba(0,0,0,0.08);
-
-  transition:0.3s;
+    line-height:1.4;
 
 }
 
+.project-content p{
 
-.project-card:hover {
+    color:var(--text-light);
 
-  transform:translateY(-10px);
+    line-height:1.8;
 
-}
-
-
-.project-card h3 {
-
-  color:#b76e79;
-
-  font-size:1.5rem;
+    margin-bottom:25px;
 
 }
 
+/* ---------- Tech Stack ---------- */
 
-.project-card p {
+.tech-stack{
 
-  color:#666;
+    display:flex;
 
-  line-height:1.6;
+    flex-wrap:wrap;
 
-}
+    gap:10px;
 
-
-.tech-stack span {
-
-  display:inline-block;
-
-  background:#f3ddd5;
-
-  padding:7px 12px;
-
-  margin:5px;
-
-  border-radius:20px;
-
-  font-size:13px;
+    margin-bottom:28px;
 
 }
 
+.tech-stack span{
 
-.project-card a {
+    background:rgba(183,110,121,.10);
 
-  display:inline-block;
+    color:var(--primary);
 
-  margin-top:20px;
+    padding:8px 15px;
 
-  color:#b76e79;
+    border-radius:50px;
 
-  font-weight:bold;
+    font-size:.85rem;
 
-  text-decoration:none;
+    font-weight:600;
+
+}
+
+/* ---------- Buttons ---------- */
+
+.project-buttons{
+
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+}
+
+.project-buttons a{
+
+    flex:1;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    padding:11px 18px;
+
+    border-radius:30px;
+
+    border:1px solid var(--primary);
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    transition:.3s ease;
+
+}
+
+.project-buttons a:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+    transform:translateY(-2px);
+
+}
+
+/* ---------- Explore Button ---------- */
+
+.view-more{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:80px;
+
+}
+
+.explore-btn{
+
+    display:inline-block;
+
+    padding:14px 36px;
+
+    border-radius:40px;
+
+    background:var(--primary);
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    transition:.3s ease;
+
+}
+
+.explore-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 25px rgba(183,110,121,.22);
+
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:768px){
+
+    .project-heading h2{
+        font-size:2.4rem;
+    }
+
+    .project-subtitle{
+        font-size:1rem;
+        margin-bottom:50px;
+    }
+
+    .project-container{
+        grid-template-columns:1fr;
+    }
+
+    .project-buttons{
+        flex-direction:column;
+    }
 
 }

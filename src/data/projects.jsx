@@ -6,7 +6,11 @@ export const projects = [
       "A Natural Language Processing toolkit that performs text preprocessing, tokenization, stemming, lemmatization, POS tagging, NER and dependency parsing.",
     tech: ["Python", "NLTK", "spaCy", "Streamlit"],
     github: "https://github.com/Rishikaj03/NLP-Toolkit",
+
+    // Add your deployed website here later
     live: "",
+    deployed: false,
+
     image: "",
     featured: true,
   },
@@ -18,7 +22,10 @@ export const projects = [
       "Machine learning based system that recommends suitable crops using soil and environmental parameters.",
     tech: ["Python", "Machine Learning", "Random Forest"],
     github: "#",
+
     live: "",
+    deployed: false,
+
     image: "",
     featured: true,
   },
@@ -30,7 +37,10 @@ export const projects = [
       "A productivity application to manage study schedules, tasks and academic planning.",
     tech: ["Python", "Excel", "Data Management"],
     github: "#",
+
     live: "",
+    deployed: false,
+
     image: "",
     featured: true,
   },
@@ -42,7 +52,10 @@ export const projects = [
       "An unsupervised learning project implementing density-based clustering techniques.",
     tech: ["Python", "ML", "Data Visualization"],
     github: "#",
+
     live: "",
+    deployed: false,
+
     image: "",
     featured: true,
   },

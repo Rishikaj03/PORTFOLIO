@@ -18,7 +18,7 @@ function Projects() {
 
       <p className="project-subtitle">
         A selection of projects that showcase my skills in Artificial Intelligence,
-        Machine Learning, Data Science, NLP, and Web Development.
+        Machine Learning, Data Science, NLP and Web Development.
       </p>
 
       <div className="project-container">
@@ -28,6 +28,21 @@ function Projects() {
           .map((project) => (
 
             <div className="project-card" key={project.id}>
+
+              <div className="project-image">
+
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                  />
+                ) : (
+                  <div className="image-placeholder">
+                    Project Preview
+                  </div>
+                )}
+
+              </div>
 
               <div className="project-content">
 
@@ -50,18 +65,20 @@ function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    GitHub ↗
+                    GitHub
                   </a>
 
-                  {project.live && (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Live Demo ↗
-                    </a>
-                  )}
+                  <button
+                    onClick={() => {
+                      if (project.deployed) {
+                        window.open(project.live, "_blank");
+                      } else {
+                        alert("🚀 Live demo coming soon!");
+                      }
+                    }}
+                  >
+                    Live Demo
+                  </button>
 
                 </div>
 

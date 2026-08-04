@@ -21,8 +21,8 @@ function Education() {
 
     {
       degree: "Higher Secondary Education (12th)",
-      institute: "Your School Name",
-      year: "2021",
+      institute: "St. Ursula Girls Junior College, Nagpur",
+      year: "2020 - 2021",
       details:
         "Completed higher secondary education with focus on science and technology."
     }

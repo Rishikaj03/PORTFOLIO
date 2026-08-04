@@ -56,7 +56,7 @@
 
     position: relative;
 
-    max-width: 850px;
+    max-width: 760px;
 
     margin: auto;
 }
@@ -86,9 +86,9 @@
 
     position: relative;
 
-    padding-left: 85px;
+    padding-left: 78px;
 
-    margin-bottom: 45px;
+    margin-bottom: 32px;
 }
 
 /* ---------- Dot ---------- */
@@ -128,13 +128,13 @@
 
     background: white;
 
-    padding: 30px;
+    padding: 24px;
 
-    border-radius: 24px;
+    border-radius: 22px;
 
     border: 1px solid #efefef;
 
-    box-shadow: 0 8px 30px rgba(0,0,0,.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,.05);
 
     transition: all .35s ease;
 }
@@ -155,9 +155,9 @@
 
     color: var(--text);
 
-    font-size: 1.4rem;
+    font-size: 1.28rem;
 
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 /* ---------- College ---------- */
@@ -200,9 +200,11 @@
 
     color: var(--text-light);
 
-    line-height: 1.8;
-}
+    font-size: .96rem;
 
+    line-height: 1.7;
+
+}
 /* ---------- Responsive ---------- */
 
 @media (max-width:768px){

@@ -42,12 +42,12 @@ export const certificates = [
     id: 3,
     title: "Python for Data Science",
     issuer: "IBM",
-    year: "2025",
+    year: "2026",
     icon: <FaPython />,
     description:
       "Built a strong foundation in Python for data science and analytics.",
     image: "",
-    link: "",
+    link: "https://coursera.org/verify/M5WQ692IY42O",
     featured: true,
   },
 

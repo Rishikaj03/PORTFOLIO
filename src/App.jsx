@@ -1,4 +1,6 @@
 import { Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 import Navbar from "./Navbar";
 import Hero from "./Hero";
@@ -31,21 +33,39 @@ function Home() {
   );
 }
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
+    <>
+      <ScrollToTop />
 
-      <Route
-        path="/certifications"
-        element={<CertificatesPage />}
-      />
+      <Routes>
+        <Route path="/" element={<Home />} />
 
-      <Route
-        path="/projects"
-        element={<ProjectsPage />}
-      />
-    </Routes>
+        <Route
+          path="/certifications"
+          element={<CertificatesPage />}
+        />
+
+        <Route
+          path="/projects"
+          element={<ProjectsPage />}
+        />
+      </Routes>
+    </>
   );
 }
 

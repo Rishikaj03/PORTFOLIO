@@ -1,0 +1,205 @@
+.cert-page{
+
+    padding:120px 8% 80px;
+
+    background:#fff;
+
+    min-height:100vh;
+
+}
+
+/* Header */
+
+.cert-page-header{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.back-btn{
+
+    display:inline-block;
+
+    margin-bottom:25px;
+
+    color:var(--primary);
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.back-btn:hover{
+
+    letter-spacing:1px;
+
+}
+
+.page-tag{
+
+    display:block;
+
+    color:var(--primary);
+
+    font-size:.9rem;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    margin-bottom:18px;
+
+}
+
+.cert-page-header h1{
+
+    font-size:3rem;
+
+    color:var(--text);
+
+    margin-bottom:20px;
+
+}
+
+.cert-page-header p{
+
+    max-width:750px;
+
+    margin:auto;
+
+    color:var(--text-light);
+
+    line-height:1.9;
+
+}
+
+/* Cards */
+
+.all-certificates{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:28px;
+
+}
+
+/* Reuse homepage card styles */
+
+.cert-card{
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.05);
+
+    transition:.35s;
+
+}
+
+.cert-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(67,56,202,.25);
+
+    box-shadow:0 15px 35px rgba(67,56,202,.15);
+
+}
+
+.cert-icon{
+
+    width:55px;
+
+    height:55px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:15px;
+
+    background:rgba(67,56,202,.1);
+
+    color:var(--primary);
+
+    font-size:1.5rem;
+
+    margin-bottom:18px;
+
+}
+
+.cert-content h3{
+
+    margin-bottom:12px;
+
+    font-size:1.2rem;
+
+}
+
+.cert-content span{
+
+    display:inline-block;
+
+    background:rgba(67,56,202,.1);
+
+    color:var(--primary);
+
+    padding:6px 14px;
+
+    border-radius:30px;
+
+    font-size:.85rem;
+
+    margin-bottom:18px;
+
+}
+
+.cert-content p{
+
+    color:var(--text-light);
+
+    line-height:1.7;
+
+    margin-bottom:22px;
+
+}
+
+.cert-buttons button{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:var(--primary);
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.cert-buttons button:hover{
+
+    transform:translateY(-2px);
+
+}

@@ -1,0 +1,242 @@
+/* =========================
+      EDUCATION SECTION
+========================= */
+
+.education {
+    background: #fff;
+}
+
+/* ---------- Heading ---------- */
+
+.education h2 {
+    text-align: center;
+
+    font-size: 3.2rem;
+
+    color: var(--text);
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+.education h2::after {
+    content: "";
+
+    display: block;
+
+    width: 80px;
+    height: 4px;
+
+    background: var(--primary);
+
+    border-radius: 50px;
+
+    margin: 18px auto 0;
+}
+
+.education-subtitle {
+
+    max-width: 700px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+
+    color: var(--text-light);
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+}
+
+/* ---------- Timeline ---------- */
+
+.timeline {
+
+    position: relative;
+
+    max-width: 760px;
+
+    margin: auto;
+}
+
+.timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 28px;
+
+    top: 0;
+
+    width: 3px;
+
+    height: 100%;
+
+    background: rgba(67,56,202,.3);
+
+    border-radius: 10px;
+}
+
+/* ---------- Timeline Item ---------- */
+
+.timeline-item {
+
+    position: relative;
+
+    padding-left: 78px;
+
+    margin-bottom: 32px;
+}
+
+/* ---------- Dot ---------- */
+
+.timeline-dot {
+
+    position: absolute;
+
+    left: 16px;
+
+    top: 30px;
+
+    width: 24px;
+
+    height: 24px;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    border: 5px solid white;
+
+    box-shadow: 0 0 0 4px rgba(67,56,202,.15);
+
+    transition: .35s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+
+    transform: scale(1.2);
+
+}
+
+/* ---------- Card ---------- */
+
+.education-card {
+
+    background: white;
+
+    padding: 24px;
+
+    border-radius: 22px;
+
+    border: 1px solid var(--border);
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.05);
+
+    transition: all .35s ease;
+}
+
+.education-card:hover {
+
+    border-color: rgba(67,56,202,.25);
+
+    box-shadow: 0 18px 35px rgba(67,56,202,.15);
+
+}
+
+/* ---------- Degree ---------- */
+
+.education-card h3 {
+
+    color: var(--text);
+
+    font-size: 1.28rem;
+
+    margin-bottom: 10px;
+}
+
+/* ---------- College ---------- */
+
+.education-card h4 {
+
+    color: var(--primary);
+
+    font-size: 1.08rem;
+
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
+
+/* ---------- Year ---------- */
+
+.education-card span {
+
+    display: inline-block;
+
+    background: rgba(67,56,202,.12);
+
+    color: var(--primary);
+
+    padding: 8px 16px;
+
+    border-radius: 30px;
+
+    font-size: .9rem;
+
+    font-weight: 600;
+
+    margin-bottom: 18px;
+}
+
+/* ---------- Description ---------- */
+
+.education-card p {
+
+    color: var(--text-light);
+
+    font-size: .96rem;
+
+    line-height: 1.7;
+
+}
+/* ---------- Responsive ---------- */
+
+@media (max-width:768px){
+
+    .education h2{
+
+        font-size:2.3rem;
+
+    }
+
+    .education-subtitle{
+
+        margin-bottom:50px;
+
+        font-size:1rem;
+
+    }
+
+    .timeline::before{
+
+        left:18px;
+
+    }
+
+    .timeline-item{
+
+        padding-left:60px;
+
+    }
+
+    .timeline-dot{
+
+        left:7px;
+
+    }
+
+}

@@ -1,0 +1,386 @@
+.hero {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding-top: 80px;
+
+    overflow: hidden;
+}
+
+/* =========================
+   AMBIENT ANIMATED BACKGROUND
+========================= */
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+
+    z-index: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+.blob {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(70px);
+
+    opacity: .35;
+}
+
+.blob-a {
+    width: 420px;
+    height: 420px;
+
+    top: -120px;
+    left: -100px;
+
+    background: var(--primary-light);
+
+    animation: driftA 16s ease-in-out infinite;
+}
+
+.blob-b {
+    width: 380px;
+    height: 380px;
+
+    bottom: -140px;
+    right: -80px;
+
+    background: var(--accent-light);
+
+    opacity: .28;
+
+    animation: driftB 20s ease-in-out infinite;
+}
+
+.blob-c {
+    width: 300px;
+    height: 300px;
+
+    top: 40%;
+    left: 55%;
+
+    background: #6d28d9;
+
+    opacity: .2;
+
+    animation: driftC 22s ease-in-out infinite;
+}
+
+@keyframes driftA {
+    0%,100% { transform: translate(0,0) scale(1); }
+    50% { transform: translate(60px,40px) scale(1.1); }
+}
+
+@keyframes driftB {
+    0%,100% { transform: translate(0,0) scale(1); }
+    50% { transform: translate(-50px,-30px) scale(1.08); }
+}
+
+@keyframes driftC {
+    0%,100% { transform: translate(0,0) scale(1); }
+    50% { transform: translate(-40px,50px) scale(1.15); }
+}
+
+.grid-overlay {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        radial-gradient(rgba(67,56,202,.14) 1px, transparent 1px);
+
+    background-size: 28px 28px;
+
+    -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 40%, #000 40%, transparent 100%);
+    mask-image: radial-gradient(ellipse 60% 60% at 50% 40%, #000 40%, transparent 100%);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+
+    max-width: 760px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.greeting {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    background: var(--section);
+
+    color: var(--primary);
+
+    padding: 10px 20px;
+
+    border-radius: 30px;
+
+    font-size: 0.95rem;
+
+    font-weight: 600;
+
+    margin-bottom: 24px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+
+    box-shadow: 0 0 0 0 rgba(245,158,11,.5);
+
+    animation: statusPulse 2s ease-out infinite;
+}
+
+@keyframes statusPulse {
+    0% { box-shadow: 0 0 0 0 rgba(245,158,11,.5); }
+    70% { box-shadow: 0 0 0 8px rgba(245,158,11,0); }
+    100% { box-shadow: 0 0 0 0 rgba(245,158,11,0); }
+}
+
+.hero h1 {
+    font-size: 4.2rem;
+
+    line-height: 1.1;
+
+    font-weight: 800;
+
+    margin-bottom: 14px;
+}
+
+/* Rotating role text — fixed height so layout doesn't jump */
+.role-wrap {
+    min-height: 2.6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 24px;
+}
+
+.role-wrap h2 {
+    font-size: 1.7rem;
+
+    color: var(--primary);
+
+    font-weight: 600;
+}
+
+.description {
+    max-width: 560px;
+
+    color: var(--text-light);
+
+    line-height: 1.9;
+
+    font-size: 1.05rem;
+
+    margin-bottom: 36px;
+}
+
+/* Buttons */
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-bottom: 40px;
+}
+
+.hero-buttons button {
+    padding: 15px 32px;
+
+    border-radius: 50px;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    transition: box-shadow .35s ease, background .35s ease, color .35s ease;
+
+    cursor: pointer;
+}
+
+.hero-buttons button:first-child {
+    background: var(--gradient);
+
+    color: white;
+
+    border: none;
+}
+
+.hero-buttons button:first-child:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.hero-buttons button:last-child {
+    background: transparent;
+
+    color: var(--primary);
+
+    border: 2px solid var(--primary);
+}
+
+.hero-buttons button:last-child:hover {
+    background: var(--primary);
+
+    color: white;
+}
+
+/* Tech stack pills */
+
+.stack-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.pill {
+    padding: 8px 18px;
+
+    border-radius: 30px;
+
+    background: var(--section);
+
+    border: 1px solid var(--border);
+
+    color: var(--text-light);
+
+    font-size: .88rem;
+
+    font-weight: 500;
+
+    cursor: default;
+
+    transition: background .3s ease, color .3s ease, border-color .3s ease;
+}
+
+.pill:hover {
+    background: var(--gradient);
+
+    border-color: transparent;
+
+    color: white;
+}
+
+/* =========================
+   SCROLL CUE
+========================= */
+
+.scroll-cue {
+    position: absolute;
+
+    bottom: 36px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--text-light);
+
+    text-decoration: none;
+}
+
+.scroll-cue-dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    animation: scrollBounce 1.8s ease-in-out infinite;
+}
+
+.scroll-cue-label {
+    font-size: .75rem;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+@keyframes scrollBounce {
+    0%,100% { transform: translateY(0); opacity: .5; }
+    50% { transform: translateY(10px); opacity: 1; }
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .blob,
+    .status-dot,
+    .scroll-cue-dot {
+        animation: none;
+    }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .role-wrap h2 {
+        font-size: 1.4rem;
+    }
+
+    .description {
+        margin: 0 auto 36px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons button {
+        width: 100%;
+    }
+
+}

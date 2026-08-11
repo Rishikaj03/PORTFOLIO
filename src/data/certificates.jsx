@@ -60,7 +60,7 @@ export const certificates = [
     description:
       "Completed a virtual data analytics and visualization simulation.",
     image: "",
-    link: "",
+    link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_EwQTBMr9rZdCvmicv_1746783774086_completion_certificate.pdf",
     featured: true,
   },
 
@@ -73,7 +73,7 @@ export const certificates = [
     description:
       "Learned Python fundamentals and programming basics.",
     image: "",
-    link: "",
+    link: "https://learn.eccouncil.org/certificate/05cecf72-db00-4768-a7a2-07937c58e1c0?logged=true",
     featured: false,
   },
 

@@ -178,30 +178,23 @@
 
 }
 
-.cert-buttons button{
-
-    width:100%;
-
-    padding:12px;
-
-    border:none;
-
-    border-radius:30px;
-
-    background:var(--primary);
-
-    color:white;
-
-    cursor:pointer;
-
-    transition:.3s;
-
+.cert-buttons .cert-view-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  transition: .3s;
 }
 
-.cert-buttons button:hover{
-
-    transform:translateY(-2px);
-
+.cert-buttons .cert-view-btn:hover {
+  transform: translateY(-2px);
 }
 /* ===== REDESIGN OVERRIDES — share the home page ambient background ===== */
 .cert-page{

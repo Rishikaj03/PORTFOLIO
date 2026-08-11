@@ -18,8 +18,7 @@ import {
 
 function Contact() {
   return (
-    <section className="contact" id="contact">
-
+    <section className="contact ambient-bg" id="contact">
       <motion.h2
         variants={fadeUp}
         initial="hidden"

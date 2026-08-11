@@ -11,7 +11,7 @@ import {
 
 function About() {
   return (
-    <section className="about" id="about">
+    <section className="about ambient-bg" id="about">
 
       {/* Heading */}
 

@@ -33,7 +33,7 @@ function Education() {
 
   return (
 
-    <section className="education" id="education">
+    <section className="education ambient-bg" id="education">
 
       <motion.h2
         variants={fadeUp}

@@ -6,7 +6,7 @@ import { certificates } from "./data/certificates";
 
 function Certifications() {
   return (
-    <section className="certifications" id="certifications">
+    <section className="certifications ambient-bg" id="certifications">
 
       {/* Heading */}
 

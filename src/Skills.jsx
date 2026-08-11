@@ -68,7 +68,7 @@ function Skills() {
 
   return (
 
-    <section className="skills" id="skills">
+    <section className="skills ambient-bg" id="skills">
 
       {/* Heading */}
 

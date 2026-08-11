@@ -19,7 +19,7 @@ export const certificates = [
     description:
       "Explored Google Cloud fundamentals, BigQuery and cloud technologies.",
     image: "",
-    pdf: "/certificates/GoogleCloud.pdf",
+    pdf: "/public/certificates/GoogleCloud.pdf",
     link: "",
     featured: true,
   },

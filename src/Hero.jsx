@@ -1,42 +1,17 @@
 import "./Hero.css";
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { fadeUp, staggerContainer } from "./animations/variants";
-
-const roles = [
-  "AI & Machine Learning Student",
-  "Data Science Enthusiast",
-  "Web Developer",
-  "Problem Solver",
-];
 
 const stack = [
   "Python", "Machine Learning", "React", "SQL", "Data Visualization", "NLP",
 ];
 
 function Hero() {
-  const [roleIndex, setRoleIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setRoleIndex((prev) => (prev + 1) % roles.length);
-    }, 2600);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section className="hero" id="home">
 
-      {/* Ambient animated background */}
-      <div className="hero-bg" aria-hidden="true">
-        <span className="blob blob-a" />
-        <span className="blob blob-b" />
-        <span className="blob blob-c" />
-        <span className="grid-overlay" />
-      </div>
-
       <motion.div
-        className="hero-content"
+        className="hero-content hero-float"
         variants={staggerContainer}
         initial="hidden"
         animate="show"
@@ -51,19 +26,9 @@ function Hero() {
           <span className="gradient-text">Rishika Jaiswal</span>
         </motion.h1>
 
-        <motion.div className="role-wrap" variants={fadeUp}>
-          <AnimatePresence mode="wait">
-            <motion.h2
-              key={roles[roleIndex]}
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -16 }}
-              transition={{ duration: 0.45, ease: "easeOut" }}
-            >
-              {roles[roleIndex]}
-            </motion.h2>
-          </AnimatePresence>
-        </motion.div>
+        <motion.h2 className="role-line gradient-text" variants={fadeUp}>
+          AI & ML Enthusiast · Data Science · Web Developer
+        </motion.h2>
 
         <motion.p className="description" variants={fadeUp}>
           Passionate about AI, Machine Learning, Data Science,

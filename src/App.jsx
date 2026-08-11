@@ -9,6 +9,7 @@ import Education from "./Education";
 import Certifications from "./Certifications";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import AmbientBackground from "./AmbientBackground";
 
 import CertificatesPage from "./pages/CertificatesPage";
 import ProjectsPage from "./pages/ProjectsPage";
@@ -16,6 +17,7 @@ import ProjectsPage from "./pages/ProjectsPage";
 function Home() {
   return (
     <>
+      <AmbientBackground />
       <Navbar />
       <Hero />
       <About />

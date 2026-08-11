@@ -6,7 +6,7 @@ import { projects } from "./data/projects";
 
 function Projects() {
   return (
-    <section className="projects ambient-bg" id="projects">
+    <section className="projects" id="projects">
 
       <motion.div
         className="project-heading"

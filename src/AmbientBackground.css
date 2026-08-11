@@ -1,0 +1,121 @@
+/* =========================
+   ONE CONTINUOUS PAGE BACKGROUND
+   Fixed behind everything — sections stay transparent
+   so this never repeats or seams between them.
+========================= */
+
+.ambient-bg {
+    position: fixed;
+    inset: 0;
+
+    z-index: -1;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    background: var(--background);
+}
+
+.ambient-blob {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(90px);
+}
+
+.ambient-blob-a {
+    width: 520px;
+    height: 520px;
+
+    top: -160px;
+    left: -140px;
+
+    background: var(--primary-light);
+
+    opacity: .22;
+
+    animation: ambientDriftA 26s ease-in-out infinite;
+}
+
+.ambient-blob-b {
+    width: 460px;
+    height: 460px;
+
+    top: 55vh;
+    right: -160px;
+
+    background: var(--accent-light);
+
+    opacity: .16;
+
+    animation: ambientDriftB 30s ease-in-out infinite;
+}
+
+.ambient-blob-c {
+    width: 420px;
+    height: 420px;
+
+    top: 20vh;
+    left: 60vw;
+
+    background: #6d28d9;
+
+    opacity: .14;
+
+    animation: ambientDriftC 34s ease-in-out infinite;
+}
+
+.ambient-blob-d {
+    width: 380px;
+    height: 380px;
+
+    top: 120vh;
+    left: 10vw;
+
+    background: var(--primary-light);
+
+    opacity: .14;
+
+    animation: ambientDriftA 28s ease-in-out infinite reverse;
+}
+
+@keyframes ambientDriftA {
+    0%,100% { transform: translate(0,0) scale(1); }
+    50% { transform: translate(70px,50px) scale(1.12); }
+}
+
+@keyframes ambientDriftB {
+    0%,100% { transform: translate(0,0) scale(1); }
+    50% { transform: translate(-60px,-40px) scale(1.1); }
+}
+
+@keyframes ambientDriftC {
+    0%,100% { transform: translate(0,0) scale(1); }
+    50% { transform: translate(-50px,60px) scale(1.15); }
+}
+
+.ambient-grid {
+    position: absolute;
+    inset: 0;
+
+    background-image: radial-gradient(rgba(67,56,202,.10) 1px, transparent 1px);
+
+    background-size: 30px 30px;
+
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 30%, transparent 85%);
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 30%, transparent 85%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ambient-blob {
+        animation: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .ambient-blob {
+        filter: blur(60px);
+    }
+}

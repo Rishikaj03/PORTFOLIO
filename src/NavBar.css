@@ -21,15 +21,15 @@
 
     padding: 0 8%;
 
-    background: rgba(255,255,255,.82);
+    background: rgba(248,247,255,.75);
 
     backdrop-filter: blur(15px);
 
     -webkit-backdrop-filter: blur(15px);
 
-    border-bottom: 1px solid rgba(0,0,0,.06);
+    border-bottom: 1px solid rgba(67,56,202,.08);
 
-    box-shadow: 0 4px 20px rgba(0,0,0,.05);
+    box-shadow: 0 4px 20px rgba(67,56,202,.06);
 
     z-index: 1000;
 

@@ -18,7 +18,8 @@ import {
 
 function Contact() {
   return (
-    <section className="contact ambient-bg" id="contact">
+    <section className="contact" id="contact">
+
       <motion.h2
         variants={fadeUp}
         initial="hidden"
@@ -52,8 +53,8 @@ function Contact() {
           <FaEnvelope className="contact-icon" />
           <h3>Email</h3>
 
-          <a href="mailto:rishika1387@gmail.com">
-            rishika1387@gmail.com
+          <a href="mailto:rishika@example.com">
+            rishika@example.com
           </a>
         </motion.div>
 
@@ -63,7 +64,7 @@ function Contact() {
           <h3>LinkedIn</h3>
 
           <a
-            href="https://www.linkedin.com/in/rishika-jaiswal-rj03?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+            href="#"
             target="_blank"
             rel="noreferrer"
           >

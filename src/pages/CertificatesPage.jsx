@@ -127,16 +127,17 @@ function CertificatesPage() {
                   <p>{cert.description}</p>
 
                   <div className="cert-buttons">
-                    {(cert.pdf || cert.image || cert.link) && ( 
-                      <a href={cert.pdf || cert.image || cert.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="cert-view-btn"
-                      >   
-                       View →
-                     </a>
-                    )}
-                     </div>
+                  {(cert.pdf || cert.image || cert.link) && (
+                  <a
+                   href={cert.pdf || cert.image || cert.link}
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="cert-view-btn"
+                  >
+                    View →
+                  </a>
+                  )}
+                </div>
                 </div>
               </motion.div>
             ))}

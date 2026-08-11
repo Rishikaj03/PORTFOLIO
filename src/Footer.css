@@ -74,3 +74,31 @@
   font-size:14px;
 
 }
+/* ===== REDESIGN OVERRIDES ===== */
+.footer{
+  background:transparent !important;
+  border-top:1px solid var(--glass-border);
+  position:relative;
+}
+.footer::before{
+  content:"";position:absolute;top:-1px;left:50%;transform:translateX(-50%);
+  width:min(560px,70%);height:2px;
+  background:linear-gradient(90deg,transparent,var(--primary-light),var(--accent),transparent);
+  opacity:.7;
+}
+.footer h2{
+  background:var(--gradient);background-size:200% auto;
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:gradientShift 6s ease infinite;
+}
+.footer-content p,.copyright{ color:var(--text-light) !important; }
+.footer-links a{
+  position:relative;color:var(--text-light) !important;font-weight:500;
+}
+.footer-links a::after{
+  content:"";position:absolute;left:0;bottom:-6px;height:2px;width:100%;
+  background:var(--gradient);transform:scaleX(0);transform-origin:right;
+  transition:transform .35s cubic-bezier(.22,1,.36,1);
+}
+.footer-links a:hover{ color:var(--primary) !important; }
+.footer-links a:hover::after{ transform:scaleX(1);transform-origin:left; }

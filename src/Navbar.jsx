@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLocation } from "react-router-dom";
 import "./NavBar.css";
 
 const LINKS = [
@@ -17,7 +18,13 @@ function Navbar() {
   const [active, setActive] = useState("home");
   const [open, setOpen] = useState(false);
 
+  const { pathname } = useLocation();
+  const isHome = pathname === "/";
+  const to = (id) => (isHome ? `#${id}` : `/#${id}`);
+
   useEffect(() => {
+    if (!isHome) return;
+
     const onScroll = () => {
       setScrolled(window.scrollY > 20);
 
@@ -39,7 +46,7 @@ function Navbar() {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [isHome]);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -57,7 +64,7 @@ function Navbar() {
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="nav-shell">
-          <a href="#home" className="nav-brand" aria-label="Back to top">
+          <a href={isHome ? "#home" : "/"} className="nav-brand" aria-label="Back to top">
             <span className="nav-logo">RJ</span>
             <span className="nav-brand-text">
               Rishika<span className="nav-brand-dot">.</span>
@@ -68,10 +75,10 @@ function Navbar() {
             {LINKS.map((link) => (
               <a
                 key={link.id}
-                href={`#${link.id}`}
-                className={active === link.id ? "active" : ""}
+                href={to(link.id)}
+                className={isHome && active === link.id ? "active" : ""}
               >
-                {active === link.id && (
+                {isHome && active === link.id && (
                   <motion.span
                     layoutId="nav-pill"
                     className="nav-pill"
@@ -84,7 +91,7 @@ function Navbar() {
           </nav>
 
           <div className="nav-actions">
-            <a href="#contact" className="nav-cta">
+            <a href={to("contact")} className="nav-cta">
               Let&apos;s talk
             </a>
 
@@ -126,9 +133,9 @@ function Navbar() {
               {LINKS.map((link, i) => (
                 <motion.a
                   key={link.id}
-                  href={`#${link.id}`}
+                  href={to(link.id)}
                   onClick={() => setOpen(false)}
-                  className={active === link.id ? "active" : ""}
+                  className={isHome && active === link.id ? "active" : ""}
                   initial={{ x: -14, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.04 * i }}

@@ -236,3 +236,44 @@
     }
 
 }
+/* ===== REDESIGN OVERRIDES ===== */
+.about-card{
+  background:var(--glass) !important;
+  -webkit-backdrop-filter:blur(18px) saturate(150%);
+  backdrop-filter:blur(18px) saturate(150%);
+  border:1px solid var(--glass-border) !important;
+  border-radius:26px !important;
+  box-shadow:var(--glass-shadow) !important;
+  overflow:hidden;
+  position:relative;
+  transition:transform .45s cubic-bezier(.22,1,.36,1),box-shadow .45s ease,border-color .45s ease,background .45s ease;
+}
+.about-card::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--primary),#6d28d9,var(--accent));
+  transform:scaleX(0);transform-origin:left;transition:transform .55s cubic-bezier(.22,1,.36,1);
+}
+.about-card:hover::before{ transform:scaleX(1); }
+.about-card:hover{
+  background:var(--glass-strong) !important;
+  border-color:rgba(99,102,241,.34) !important;
+  box-shadow:var(--glass-shadow-hover) !important;
+}
+.about-card .icon-box{
+  background:var(--gradient) !important;
+  background-size:200% auto !important;
+  color:#fff !important;
+  border-radius:20px !important;
+  box-shadow:0 14px 30px -14px rgba(67,56,202,.8);
+  animation:gradientShift 8s ease infinite;
+}
+.about-card:hover .icon-box{ box-shadow:0 18px 38px -14px rgba(67,56,202,.95); }
+.about-card ul li{ transition:transform .3s ease,color .3s ease; }
+.about-card ul li:hover{ transform:translateX(6px); color:var(--primary); }
+.about-tag{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:8px 18px;border-radius:999px;
+  font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--primary);background:rgba(99,102,241,.09);
+  border:1px solid rgba(99,102,241,.2);
+}

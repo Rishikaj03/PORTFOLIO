@@ -184,3 +184,203 @@ box-shadow:var(--shadow-hover);
 .float-slow{
   animation:floatSlow 8s ease-in-out infinite;
 }
+
+/* =========================================================
+   REDESIGN LAYER — glass surfaces, shared section rhythm
+   NOTE: page background is owned by AmbientBackground.css
+   and is intentionally untouched.
+========================================================= */
+
+:root{
+  --glass:rgba(255,255,255,.62);
+  --glass-strong:rgba(255,255,255,.82);
+  --glass-border:rgba(99,102,241,.16);
+  --glass-shadow:0 18px 50px -22px rgba(49,46,129,.45);
+  --glass-shadow-hover:0 30px 70px -26px rgba(49,46,129,.55);
+  --ring:0 0 0 1px rgba(99,102,241,.12);
+}
+
+/* ---- Glass card ---- */
+.glass{
+  position:relative;
+  background:var(--glass);
+  -webkit-backdrop-filter:blur(18px) saturate(150%);
+  backdrop-filter:blur(18px) saturate(150%);
+  border:1px solid var(--glass-border);
+  border-radius:var(--radius);
+  box-shadow:var(--glass-shadow);
+  transition:transform .45s cubic-bezier(.22,1,.36,1),
+             box-shadow .45s cubic-bezier(.22,1,.36,1),
+             border-color .45s ease,
+             background .45s ease;
+  overflow:hidden;
+}
+
+/* moving sheen on hover */
+.glass::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);
+  transform:translateX(-120%);
+  transition:transform .9s cubic-bezier(.22,1,.36,1);
+  pointer-events:none;
+}
+.glass:hover::after{ transform:translateX(120%); }
+
+.glass:hover{
+  background:var(--glass-strong);
+  border-color:rgba(99,102,241,.34);
+  box-shadow:var(--glass-shadow-hover);
+}
+
+/* gradient hairline that lights up on hover */
+.glass-top::before{
+  content:"";
+  position:absolute;
+  top:0; left:0; right:0;
+  height:2px;
+  background:linear-gradient(90deg,var(--primary),#6d28d9,var(--accent));
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .5s cubic-bezier(.22,1,.36,1);
+}
+.glass-top:hover::before{ transform:scaleX(1); }
+
+/* ---- Section heading rhythm ---- */
+.sec-head{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  gap:14px;
+  margin-bottom:18px;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  padding:8px 18px;
+  border-radius:999px;
+  font-size:.74rem;
+  font-weight:700;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--primary);
+  background:rgba(99,102,241,.09);
+  border:1px solid rgba(99,102,241,.2);
+  -webkit-backdrop-filter:blur(10px);
+  backdrop-filter:blur(10px);
+}
+
+.eyebrow::before{
+  content:"";
+  width:6px; height:6px;
+  border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 10px var(--accent);
+  animation:pulseGlow 2.4s ease-in-out infinite;
+}
+
+.sec-sub{
+  max-width:680px;
+  margin:0 auto 60px;
+  text-align:center;
+  color:var(--text-light);
+  font-size:1.05rem;
+  line-height:1.85;
+}
+
+.rule{
+  width:70px;
+  height:3px;
+  border-radius:3px;
+  background:var(--gradient);
+  background-size:200% auto;
+  animation:gradientShift 5s ease infinite;
+}
+
+/* ---- Chips / tags ---- */
+.chip{
+  display:inline-block;
+  padding:7px 14px;
+  border-radius:999px;
+  font-size:.8rem;
+  font-weight:600;
+  color:var(--primary-dark);
+  background:rgba(99,102,241,.1);
+  border:1px solid rgba(99,102,241,.18);
+  transition:var(--transition);
+}
+.chip:hover{
+  color:#fff;
+  background:var(--gradient);
+  border-color:transparent;
+  transform:translateY(-3px);
+  box-shadow:0 10px 22px -10px rgba(67,56,202,.7);
+}
+
+/* ---- Buttons ---- */
+.btn{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:14px 30px;
+  border-radius:999px;
+  font-weight:600;
+  font-size:.95rem;
+  overflow:hidden;
+  transition:var(--transition);
+}
+
+.btn-primary{
+  color:#fff;
+  background:var(--gradient);
+  box-shadow:0 16px 34px -16px rgba(67,56,202,.85);
+}
+.btn-primary:hover{
+  transform:translateY(-4px);
+  box-shadow:0 24px 46px -18px rgba(67,56,202,.95);
+}
+
+.btn-ghost{
+  color:var(--primary-dark);
+  background:var(--glass);
+  border:1px solid var(--glass-border);
+  -webkit-backdrop-filter:blur(14px);
+  backdrop-filter:blur(14px);
+}
+.btn-ghost:hover{
+  transform:translateY(-4px);
+  border-color:var(--primary-light);
+  color:var(--primary);
+  box-shadow:0 18px 34px -20px rgba(67,56,202,.7);
+}
+
+/* ---- Icon tile (keeps existing icon motion, restyled shell) ---- */
+.icon-tile{
+  display:grid;
+  place-items:center;
+  width:62px;
+  height:62px;
+  border-radius:20px;
+  font-size:1.5rem;
+  color:#fff;
+  background:var(--gradient);
+  background-size:200% auto;
+  box-shadow:0 14px 30px -14px rgba(67,56,202,.8);
+  transition:var(--transition);
+  animation:gradientShift 8s ease infinite;
+}
+
+@keyframes shimmerLine{
+  0%{ background-position:0% 50%; }
+  100%{ background-position:200% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .glass::after{ display:none; }
+}

@@ -3,9 +3,6 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
 import "./CertificatesPage.css";
-
-import Navbar from "../Navbar";
-import Footer from "../Footer";
 import AmbientBackground from "../AmbientBackground";
 
 import { fadeUp, staggerContainer } from "../animations/variants";

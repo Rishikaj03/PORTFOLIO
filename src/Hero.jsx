@@ -1,6 +1,7 @@
 import "./Hero.css";
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer } from "./animations/variants";
+import { Link } from "react-router-dom";
 
 const stack = [
   "Python", "Machine Learning", "React", "SQL", "Data Visualization", "NLP",
@@ -48,7 +49,9 @@ function Hero() {
             whileHover={{ y: -4, scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
           >
-            View Projects
+           <Link to="/projects" className="hero-project-btn">
+              View Projects
+            </Link>
           </motion.button>
         </motion.div>
 

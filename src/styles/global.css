@@ -184,3 +184,93 @@ box-shadow:var(--shadow-hover);
 .float-slow{
   animation:floatSlow 8s ease-in-out infinite;
 }
+
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+
+    z-index: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+.blob {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(70px);
+
+    opacity: .35;
+}
+
+.blob-a {
+    width: 420px;
+    height: 420px;
+
+    top: -120px;
+    left: -100px;
+
+    background: var(--primary-light);
+
+    animation: driftA 16s ease-in-out infinite;
+}
+
+.blob-b {
+    width: 380px;
+    height: 380px;
+
+    bottom: -140px;
+    right: -80px;
+
+    background: var(--accent-light);
+
+    opacity: .28;
+
+    animation: driftB 20s ease-in-out infinite;
+}
+
+.blob-c {
+    width: 300px;
+    height: 300px;
+
+    top: 40%;
+    left: 55%;
+
+    background: #6d28d9;
+
+    opacity: .2;
+
+    animation: driftC 22s ease-in-out infinite;
+}
+
+@keyframes driftA {
+    0%,100% { transform: translate(0,0) scale(1); }
+    50% { transform: translate(60px,40px) scale(1.1); }
+}
+
+@keyframes driftB {
+    0%,100% { transform: translate(0,0) scale(1); }
+    50% { transform: translate(-50px,-30px) scale(1.08); }
+}
+
+@keyframes driftC {
+    0%,100% { transform: translate(0,0) scale(1); }
+    50% { transform: translate(-40px,50px) scale(1.15); }
+}
+
+.grid-overlay {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        radial-gradient(rgba(67,56,202,.14) 1px, transparent 1px);
+
+    background-size: 28px 28px;
+
+    -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 40%, #000 40%, transparent 100%);
+    mask-image: radial-gradient(ellipse 60% 60% at 50% 40%, #000 40%, transparent 100%);
+}

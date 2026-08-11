@@ -34,7 +34,7 @@ export const certificates = [
       "Learned data analytics concepts and data-driven decision making.",
     image: "",
     pdf: "",
-    link: "",
+    link: "https://coursera.org/verify/GU77GZRZVIJK",
     featured: true,
   },
 

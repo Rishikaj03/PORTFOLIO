@@ -19,7 +19,7 @@ export const certificates = [
     description:
       "Explored Google Cloud fundamentals, BigQuery and cloud technologies.",
     image: "",
-    pdf: "",
+    pdf: "/certificates/GoogleCloud.pdf",
     link: "",
     featured: true,
   },
@@ -33,6 +33,7 @@ export const certificates = [
     description:
       "Learned data analytics concepts and data-driven decision making.",
     image: "",
+    pdf: "",
     link: "",
     featured: true,
   },

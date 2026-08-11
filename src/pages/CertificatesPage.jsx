@@ -4,8 +4,6 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import "./CertificatesPage.css";
 
-
-import Footer from "../Footer";
 import AmbientBackground from "../AmbientBackground";
 
 import { fadeUp, staggerContainer } from "../animations/variants";
